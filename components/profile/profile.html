@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>Отзовик - Личный кабинет</title>
+</head>
+<body>
+    <script src="/js/profile.js" defer></script>
+    <script src="/js/checkToken.js" defer></script>
+    <script src="/js/logout.js" defer></script>
+    <header class="header">
+        <div class="logo-area">
+            <span class="logo-placeholder"><img src="/logo.png" alt="Логотип"></span>
+            <a href="/"><span class="site-name"><strong>Отзовик</strong></span></a>
+        </div>
+        <div class="header-right">
+            <a class="login-btn" href="/login">Вход</a>
+
+            <a class="login-btn" href="/profile">Личный кабинет</a>
+
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="profile-container">
+            <div class="profile-box">
+                <h1 class="profile-title">Личный кабинет</h1>
+                <div class="profile-greeting">Здравствуйте, <span id="name">Иван Иванов</span></div>
+
+                <form id="form" class="profile-form">
+                    <div class="form-group">
+                        <label class="form-label">Электронная почта</label>
+                        <input id="email" type="email" class="form-input form-input-disabled" name="email" value="ivan@example.com" disabled readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Пол</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input id="female" type="radio" name="gender" value="female" class="radio-input"> Женский
+                            </label>
+                            <label class="radio-label">
+                                <input id="male" type="radio" name="gender" value="male" class="radio-input"> Мужской
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Город</label>
+                        <input id="city" type="text" class="form-input" name="city" placeholder="Введите ваш город">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Дата рождения</label>
+                        <input id="birthdate" type="date" class="form-input" name="birthdate">
+                    </div>
+
+                    <button type="submit" class="save-button">Сохранить изменения</button>
+                </form>
+                <button id="logout" style="background-color: rgb(151, 10, 10); width: 100%;" class="save-button logout">Выйти из аккаунта</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-info">
+            <strong>Отзовик.рф</strong><br>
+            +7(981)918-81-18
+            г. Москва, ул. Красная, д. 7<br>
+            Все права защищены 2026<br>
+            <a href="/faq" class="faq-link">FAQ</a>
+        </div>
+    </footer>
+</body>
+</html>

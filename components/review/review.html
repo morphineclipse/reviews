@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/review.css">
+    <title>Отзовик - Отзывы</title>
+</head>
+<body>
+    <script src="/js/newReview.js" defer></script>
+    <script src="/js/modal.js" defer></script>
+    <script src="/js/reviews.js" defer></script>
+    <script type="module" src="/js/checkToken.js" defer></script>
+    <header class="header">
+        <div class="logo-area">
+            <span class="logo-placeholder"><img src="/logo.png" alt="Логотип"></span>
+            <a href="/"><span class="site-name"><strong>Отзовик</strong></span></a>
+        </div>
+        <div class="header-right">
+            <a class="login-btn" href="/login">Вход</a>
+
+            <a class="login-btn" href="/profile">Личный кабинет</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="reviews-container">
+            <div class="reviews-header">
+                <h1 class="reviews-title">Отзывы</h1>
+                <div class="reviews-controls">
+                    <div class="company-select-wrapper">
+                        <label class="select-label">Выберите компанию:</label>
+                        <select class="company-select">
+                            <option value="all">Все компании</option>
+                            <option value="avito">Авито</option>
+                            <option value="aliexpress">Алиэкспресс</option>
+                            <option value="bank">БанкКубань</option>
+                            <option value="wildberries">Вайлдберриз</option>
+                            <option value="lamoda">Ламода</option>
+                            <option value="ozon">Озон</option>
+                            <option value="sbermegamarket">СберМегаМаркет</option>
+                            <option value="yandexmarket">ЯндексМаркет</option>
+                        </select>
+                    </div>
+                    <button class="search-btn">Поиск</button>
+                    <button class="add-review-btn">Добавить отзыв</button>
+                </div>
+            </div>
+
+            <div class="recent-reviews">
+                <h2 class="recent-title">Недавние отзывы</h2>
+                <div class="reviews-grid">
+                    
+                    <div class="review-card">
+                        <div class="review-company">Озон</div>
+                        <div class="review-stars">
+                            <div class="rating">
+                                <input type="radio" name="rating" id="star5" value="5" />
+                                <label for="star5">★</label>
+
+                                <input type="radio" name="rating" id="star4" value="4" />
+                                <label for="star4">★</label>
+
+                                <input type="radio" name="rating" id="star3" value="3" />
+                                <label for="star3">★</label>
+
+                                <input type="radio" name="rating" id="star2" value="2" />
+                                <label for="star2">★</label>
+
+                                <input type="radio" name="rating" id="star1" value="1" />
+                                <label for="star1">★</label>
+                            </div>
+                        </div>
+                        <div class="review-pluses-text">Достоинства</div>
+                        <div class="review-pluses">Быстрая доставка, удобное приложение понравилось это, не понравилось это, по
+                        </div>
+                        <div class="review-minuses-text">Недостатки</div>
+                        <div class="review-pluses">Цены выше среднего цены выше цены ниже цены выше цены ниже цены выше цены н
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-company">Вайлдберриз</div>
+                        <div class="review-stars">
+                            <div class="rating">
+                                <input type="radio" name="rating" id="star5" value="5" />
+                                <label for="star5">★</label>
+
+                                <input type="radio" name="rating" id="star4" value="4" />
+                                <label for="star4">★</label>
+
+                                <input type="radio" name="rating" id="star3" value="3" />
+                                <label for="star3">★</label>
+
+                                <input type="radio" name="rating" id="star2" value="2" />
+                                <label for="star2">★</label>
+
+                                <input type="radio" name="rating" id="star1" value="1" />
+                                <label for="star1">★</label>
+                            </div>
+                        </div>
+                        <div class="review-pluses-text">Достоинства</div>
+                        <div class="review-pluses">Быстрая доставка, удобное приложение</div>
+                        <div class="review-minuses-text">Недостатки</div>
+                        <div class="review-pluses">Цены выше среднего</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-company">Алиэкспресс</div>
+                        <div class="review-stars">
+                            <div class="rating">
+                                <input type="radio" name="rating" id="star5" value="5" />
+                                <label for="star5">★</label>
+
+                                <input type="radio" name="rating" id="star4" value="4" />
+                                <label for="star4">★</label>
+
+                                <input type="radio" name="rating" id="star3" value="3" />
+                                <label for="star3">★</label>
+
+                                <input type="radio" name="rating" id="star2" value="2" />
+                                <label for="star2">★</label>
+
+                                <input type="radio" name="rating" id="star1" value="1" />
+                                <label for="star1">★</label>
+                            </div>
+                        </div>
+                        <div class="review-pluses-text">Достоинства</div>
+                        <div class="review-pluses">Быстрая доставка, удобное приложение</div>
+                        <div class="review-minuses-text">Недостатки</div>
+                        <div class="review-pluses">Цены выше среднего</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-company">Яндекс.Маркет</div>
+                        <div class="review-stars">
+                            <div class="rating">
+                                <input type="radio" name="rating" id="star5" value="5" />
+                                <label for="star5">★</label>
+
+                                <input type="radio" name="rating" id="star4" value="4" />
+                                <label for="star4">★</label>
+
+                                <input type="radio" name="rating" id="star3" value="3" />
+                                <label for="star3">★</label>
+
+                                <input type="radio" name="rating" id="star2" value="2" />
+                                <label for="star2">★</label>
+
+                                <input type="radio" name="rating" id="star1" value="1" />
+                                <label for="star1">★</label>
+                            </div>
+                        </div>
+                        <div class="review-pluses-text">Достоинства</div>
+                        <div class="review-pluses">Быстрая доставка, удобное приложение</div>
+                        <div class="review-minuses-text">Недостатки</div>
+                        <div class="review-pluses">Цены выше среднего</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-company">Авито</div>
+                        <div class="review-stars">
+                            <div class="rating">
+                                <input type="radio" name="rating" id="star5" value="5" />
+                                <label for="star5">★</label>
+
+                                <input type="radio" name="rating" id="star4" value="4" />
+                                <label for="star4">★</label>
+
+                                <input type="radio" name="rating" id="star3" value="3" />
+                                <label for="star3">★</label>
+
+                                <input type="radio" name="rating" id="star2" value="2" />
+                                <label for="star2">★</label>
+
+                                <input type="radio" name="rating" id="star1" value="1" />
+                                <label for="star1">★</label>
+                            </div>
+                        </div>
+                        <div class="review-pluses-text">Достоинства</div>
+                        <div class="review-pluses">Быстрая доставка, удобное приложение</div>
+                        <div class="review-minuses-text">Недостатки</div>
+                        <div class="review-pluses">Цены выше среднего</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-company">СберМегаМаркет</div>
+                        <div class="review-stars">
+                            <div class="rating">
+                                <input type="radio" name="rating" id="star5" value="5" />
+                                <label for="star5">★</label>
+
+                                <input type="radio" name="rating" id="star4" value="4" />
+                                <label for="star4">★</label>
+
+                                <input type="radio" name="rating" id="star3" value="3" />
+                                <label for="star3">★</label>
+
+                                <input type="radio" name="rating" id="star2" value="2" />
+                                <label for="star2">★</label>
+
+                                <input type="radio" name="rating" id="star1" value="1" />
+                                <label for="star1">★</label>
+                            </div></div>
+                        <div class="review-pluses-text">Достоинства</div>
+                        <div class="review-pluses">Быстрая доставка, удобное приложение</div>
+                        <div class="review-minuses-text">Недостатки</div>
+                        <div class="review-pluses">Цены выше среднего</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!---->
+
+    <div class="modal-overlay" style="display: none;">
+        <div class="modal-window">
+            <div class="modal-header">
+                <div class="modal-title">Добавление отзыва</div>
+                <div class="modal-close">×</div>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="select-label">Выберите компанию</label>
+                    <select id="company" class="company-select">
+                        <option value="all">Все компании</option>
+                        <option value="avito">Авито</option>
+                        <option value="aliexpress">Алиэкспресс</option>
+                        <option value="bank">БанкКубань</option>
+                        <option value="wildberries">Вайлдберриз</option>
+                        <option value="lamoda">Ламода</option>
+                        <option value="ozon">Озон</option>
+                        <option value="sbermegamarket">СберМегаМаркет</option>
+                        <option value="yandexmarket">ЯндексМаркет</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Оценка</label>
+                        <div class="review-stars">
+                            <div class="rating">
+                                <input type="radio" name="rating" id="star5" value="5" />
+                                <label for="star5">★</label>
+
+                                <input type="radio" name="rating" id="star4" value="4" />
+                                <label for="star4">★</label>
+
+                                <input type="radio" name="rating" id="star3" value="3" />
+                                <label for="star3">★</label>
+
+                                <input type="radio" name="rating" id="star2" value="2" />
+                                <label for="star2">★</label>
+
+                                <input type="radio" name="rating" id="star1" value="1" />
+                                <label for="star1">★</label>
+                            </div>
+                        </div>
+                <div class="form-group">
+                    <label class="form-label">Достоинства (не более 75 символов)</label>
+                    <textarea class="form-textarea" rows="3" placeholder="Что вам понравилось?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Недостатки (не более 75 символов)</label>
+                    <textarea class="form-textarea" rows="3" placeholder="Что можно улучшить?"></textarea>
+                </div>
+                <button id="submit-btn" class="submit-review-btn">Отправить отзыв</button>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-info">
+            <strong>Отзовик.рф</strong><br>
+            +7(981)918-81-18
+            г. Москва, ул. Красная, д. 7<br>
+            Все права защищены 2026<br>
+            <a href="/faq" class="faq-link">FAQ</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/analysis.css">
+    <title>Отзовик - Анализ отзывов</title>
+</head>
+<body>
+    <script src="/js/analysis.js" defer></script>
+    <script type="module" src="/js/checkToken.js" defer></script>
+    <header class="header">
+        <div class="logo-area">
+            <span class="logo-placeholder"><img src="/logo.png" alt="Логотип"></span>
+            <a href="/"><span class="site-name"><strong>Отзовик</strong></span></a>
+        </div>
+        <div class="header-right">
+            <a class="login-btn" href="/login">Вход</a>
+
+            <a class="login-btn" href="/profile">Личный кабинет</a>
+
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="analysis-container">
+    <div class="analysis-header">
+        <h1 class="analysis-title">Анализ отзывов</h1>
+        <div class="analysis-controls">
+            <div class="company-select-wrapper">
+                <label class="select-label">Выберите компанию:</label>
+                <select class="company-select">
+                    <option value="all">Все компании</option>
+                    <option value="avito">Авито</option>
+                    <option value="aliexpress">Алиэкспресс</option>
+                    <option value="bank">БанкКубань</option>
+                    <option value="wildberries">Вайлдберриз</option>
+                    <option value="lamoda">Ламода</option>
+                    <option value="ozon">Озон</option>
+                    <option value="sbermegamarket">СберМегаМаркет</option>
+                    <option value="yandexmarket">ЯндексМаркет</option>
+                </select>
+            </div>
+            <button class="search-btn">Поиск</button>
+        </div>
+    </div>
+
+    <div class="analysis-stats">
+        <h2 class="stats-title">Статистика по отзывам и отзывающимся</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Всего отзывов</div>
+                <div class="stat-value">100</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Среднее количество звезд</div>
+                <div class="stat-value">4,5</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Средний возраст</div>
+                <div class="stat-value">25</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Соотношение полов</div>
+                <div class="stat-value">Ж-50% М-50%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Самый популярный город</div>
+                <div class="stat-value">Москва</div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-info">
+            <strong>Отзовик.рф</strong><br>
+            +7(981)918-81-18
+            г. Москва, ул. Красная, д. 7<br>
+            Все права защищены 2026<br>
+            <a href="/faq" class="faq-link">FAQ</a>
+        </div>
+    </footer>
+</body>
+</html>
