@@ -7,6 +7,7 @@ import bcrypt from "bcrypt";
 import path from 'path'
 import { fileURLToPath } from 'url'
 
+const PORT = process.env.PORT || 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -337,7 +338,7 @@ app.get('/faq', (req, res) => {
   res.sendFile(path.join(process.cwd(), 'components', 'faq', 'faq.html'))
 })
 
-app.listen(process.env.PORT, () => {
-  console.log("server started");
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server listening on port ${PORT}`);
 });
 
